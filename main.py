@@ -84,5 +84,19 @@ button_10 = tk.Button(
         bostonhousing_dataset_custom
     ),
 ).grid(row=19, column=1)
+button_11 = tk.Button(
+    root,
+    text="Random Forest Classifier Non Regulations",
+    command=lambda: AlgorithmsWithIrisDataset.RandomForestClassifierNonRegulations(
+        iris_dataset_scikitlearn
+    ),
+).grid(row=21, column=1)
+button_10 = tk.Button(
+    root,
+    text="Boosted Decision Tree Using Ada",
+    command=lambda: AlgorithmsWithIrisDataset.BoostedDecisionTreeUsingAda(
+        iris_dataset_scikitlearn
+    ),
+).grid(row=32, column=1)
 # run tkinter Window
 root.mainloop()

@@ -6,6 +6,7 @@ import sklearn.linear_model as lm
 from sklearn import neighbors
 from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier
 
 
 class AlgorithmsWithIrisDataset:
@@ -89,6 +90,20 @@ class AlgorithmsWithIrisDataset:
         )
         print("Stochastic Gradient Descent Regressor")
         AlgorithmsWithIrisDataset.RunEstimator(dataset, lm.SGDRegressor())
+
+    def RandomForestClassifierNonRegulations(dataset):
+        print(
+            "_________________________________________________________________________"
+        )
+        print("Random Forest Classifier Non Regulations")
+        AlgorithmsWithIrisDataset.RunEstimator(dataset, RandomForestClassifier())
+
+    def BoostedDecisionTreeUsingAda(dataset):
+        print(
+            "_________________________________________________________________________"
+        )
+        print("Boosted Decision Tree Using Ada")
+        AlgorithmsWithIrisDataset.RunEstimator(dataset, AdaBoostClassifier())
 
 
 class AlgorithmsWithCustomDataset:
